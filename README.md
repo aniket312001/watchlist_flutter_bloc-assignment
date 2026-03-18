@@ -36,8 +36,18 @@ The app follows **Clean Architecture**:
 
 ---
 
+## Watchlist Demo
+
+![Watchlist Demo1](assets/demo1.gif)
+![Watchlist Demo2](assets/demo2.gif)
+
+---
+
 ## How to Run
 
 1. Clone the repository:
 ```bash
 git clone https://github.com/aniket312001/watchlist_flutter_bloc-assignment.git
+
+
+
