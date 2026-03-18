@@ -1,16 +1,43 @@
-# stock_market
+# Watchlist Flutter BLoC Assignment
 
-A new Flutter project.
+This project is a sample Flutter application implementing a **Watchlist** feature similar to a trading app. Stocks in a watchlist can be dynamically updated, and the app uses **Flutter BLoC** for state management.
 
-## Getting Started
+---
 
-This project is a starting point for a Flutter application.
+## Features
 
-A few resources to get you started if this is your first Flutter project:
+- Display multiple watchlists with stocks.
+- Real-time updating of stock price, change, and percentage using a simulated stream.
+- Swap stocks within a watchlist.
+- UI/UX designed for responsiveness and clarity.
+- Fully type-safe code using Dart null-safety.
+- Clean project structure with separate layers (DataSource, Repository, UseCase, Bloc, UI).
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+---
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Architecture
+
+The app follows **Clean Architecture**:
+
+1. **Domain Layer**
+   - Entities: `StockEntity`, `WatchlistEntity`
+   - Repository abstraction: `WatchlistRepository`
+   - UseCase: `GetWatchlistsUseCase`
+
+2. **Data Layer**
+   - Data source: `WatchlistRemoteDataSource` (dummy data)
+   - Repository implementation: `WatchlistRepositoryImpl`
+
+3. **Presentation Layer**
+   - Bloc: `WatchlistBloc`
+   - Events: `LoadWatchlists`, `ChangeWatchlist`, `UpdateWatchlist`, `StockUpdated`
+   - States: `WatchlistState`
+   - UI: Flutter screens & widgets for displaying watchlists and stocks.
+
+---
+
+## How to Run
+
+1. Clone the repository:
+```bash
+git clone https://github.com/aniket312001/watchlist_flutter_bloc-assignment.git
